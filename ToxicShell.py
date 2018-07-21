@@ -13,7 +13,7 @@ while run == True:
             process = subprocess.Popen(command[:], stdout = subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, shell=True)
             output = process.stdout.read() + process.stderr.read()
             output_string = str(output)
-            print(str(output))
+            print(output_string)
     except Exception as msg:
         print("An error occured! ", str(msg))
     

@@ -18,3 +18,4 @@ while run == True:
             print(output_string)
     except Exception as msg:
         print("An error occured! ", str(msg))
+        

@@ -1,12 +1,13 @@
-import subprocess, os
+import subprocess, os, re
 
 
 run = True
 
 while run == True:
     try:
+        print("Type 'exit' to exit the shell")
         command = str(input("ToxicShell:>"))
-        if command == "exit" or command == "Exit":
+        if re.search("exit", command, re.IGNORECASE):
             run = False
         elif command[:2] == "cd":
             os.chdir(command[3:])
@@ -17,5 +18,3 @@ while run == True:
             print(output_string)
     except Exception as msg:
         print("An error occured! ", str(msg))
-    
-    
